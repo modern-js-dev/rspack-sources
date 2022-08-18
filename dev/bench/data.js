@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660818846142,
+  "lastUpdate": 1660818876133,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3321,6 +3321,62 @@ window.BENCHMARK_DATA = {
             "range": "±0.16%",
             "unit": "ops/sec",
             "extra": "94 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "8a4c4e7d286b4a6433bc3c76f36bd79b56b8d1aa",
+          "message": "support replaceSource (close #10)",
+          "timestamp": "2022-05-07T10:37:36Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/14/commits/8a4c4e7d286b4a6433bc3c76f36bd79b56b8d1aa"
+        },
+        "date": 1660818875806,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 12116,
+            "range": "± 69",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 9720,
+            "range": "± 84",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11079,
+            "range": "± 43",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 9046,
+            "range": "± 44",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_url",
+            "value": 12008,
+            "range": "± 62",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_url_with_cache",
+            "value": 9958,
+            "range": "± 51",
+            "unit": "ns/iter"
           }
         ]
       }
