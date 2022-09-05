@@ -1,14 +1,13 @@
 use parcel_sourcemap::{Mapping, OriginalLocation, SourceMap};
-use smol_str::SmolStr;
 
 use crate::{Error, MapOptions, Source};
 
 #[derive(Debug, Clone)]
 pub struct SourceMapSource {
-  source_code: SmolStr,
-  name: SmolStr,
+  source_code: String,
+  name: String,
   source_map: SourceMap,
-  original_source: Option<SmolStr>,
+  original_source: Option<String>,
   inner_source_map: Option<SourceMap>,
 }
 
@@ -38,8 +37,6 @@ impl SourceMapSource {
       inner_source_map,
     } = options;
 
-    let original_source: Option<SmolStr> = original_source.map(Into::into);
-
     Self {
       source_code: source_code.into(),
       name: name.into(),
@@ -63,8 +60,6 @@ impl SourceMapSource {
     } else {
       None
     };
-
-    let original_source: Option<SmolStr> = original_source.map(Into::into);
 
     Ok(Self {
       source_code: String::from_utf8(source_code.to_vec())?.into(),
@@ -273,13 +268,48 @@ mod tests {
     let mut source = ConcatSource::new([inner.clone(), inner]);
     assert_eq!(source.source(), format!("{}{}", &code, &code));
   }
-}
 
-// impl From<SourceMapSource> for CachedSource<SourceMapSource> {
-//   fn from(source_map: SourceMapSource) -> Self {
-//     Self::new(source_map)
-//   }
-// }
+  #[test]
+  fn should_map_generated_lines_to_the_inner_source() {
+    let mut source = SourceMapSource::new(SourceMapSourceOptions {
+      source_code: "Message: H W!".to_string(),
+      name: "HELLO_WORLD.txt".to_string(),
+      source_map: SourceMap::from_json(
+        "/",
+        r#"{
+          "version": 3,
+          "sources": ["messages.txt", "HELLO_WORLD.txt"],
+          "mappings": "AAAAA,SCAAC,EAAMC,C",
+          "names": ["Message", "hello", "world"]
+        }"#,
+      )
+      .unwrap(),
+      original_source: Some("HELLO WORLD".to_string()),
+      inner_source_map: Some(
+        SourceMap::from_json(
+          "/",
+          r#"{
+          "version": 3,
+          "mappings": "AAAAA,M",
+          "sources": ["hello world.txt"],
+          "sourcesContent": ["hello world"],
+          "names": [""]
+        }"#,
+        )
+        .unwrap(),
+      ),
+    });
+    println!(
+      "{}",
+      source
+        .map(&MapOptions::default())
+        .unwrap()
+        .to_json(None)
+        .unwrap()
+    );
+    println!("{}", source.source());
+  }
+}
 
 #[test]
 fn test_source_map_source() {

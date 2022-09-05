@@ -1,15 +1,14 @@
 use parcel_sourcemap::{OriginalLocation, SourceMap};
-use smol_str::SmolStr;
 
 use crate::{MapOptions, Source};
 
 pub struct OriginalSource {
-  source_code: SmolStr,
-  name: SmolStr,
+  source_code: String,
+  name: String,
 }
 
 impl OriginalSource {
-  pub fn new(source_code: &str, name: &str) -> Self {
+  pub fn new(source_code: impl Into<String>, name: impl Into<String>) -> Self {
     Self {
       source_code: source_code.into(),
       name: name.into(),

@@ -14,7 +14,6 @@ concurrent = []
 parcel_sourcemap = { git = "https://github.com/ahabhgk/parcel-source-map.git", branch = "from_json", features = [
   "json",
 ] }
-smol_str = "0.1"
 tracing = "0.1"
 base64-simd = "0.7"
 

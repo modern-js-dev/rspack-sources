@@ -1,7 +1,4 @@
 use parcel_sourcemap::SourceMap;
-use smol_str::SmolStr;
-
-use crate::utils::Lrc;
 
 #[derive(Clone, PartialEq, Eq, Hash)]
 pub struct MapOptions {

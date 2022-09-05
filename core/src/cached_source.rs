@@ -1,14 +1,13 @@
 use std::collections::HashMap;
 
 use parcel_sourcemap::SourceMap;
-use smol_str::SmolStr;
 
 use crate::{utils::Lrc, MapOptions, Source};
 
 pub struct CachedSource<T: Source> {
   inner: T,
   cached_map: HashMap<MapOptions, Option<SourceMap>>,
-  cached_code: Option<SmolStr>,
+  cached_code: Option<String>,
 }
 
 impl<T: Source> CachedSource<T> {
@@ -41,7 +40,7 @@ impl<T: Source> Source for CachedSource<T> {
       return cached_code.to_string();
     }
     let code = self.inner.source();
-    self.cached_code = Some(SmolStr::from(&code));
+    self.cached_code = Some(String::from(&code));
     code
   }
 
