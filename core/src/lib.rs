@@ -13,6 +13,7 @@ mod utils;
 pub use cached_source::CachedSource;
 pub use concat_source::ConcatSource;
 pub use original_source::OriginalSource;
+pub use parcel_sourcemap::{self, SourceMap};
 pub use raw_source::RawSource;
 pub use result::{Error, RspackSourcesError};
 pub use source::{MapOptions, Source};
@@ -31,15 +32,13 @@ fn t() {
   let ss: Vec<_> = ss
     .par_iter_mut()
     .map(|s| {
-      let s = s
-        .map(&MapOptions {
-          columns: true,
-          ..Default::default()
-        })
-        .unwrap();
-      let mut output: Vec<u8> = vec![];
-      s.to_writer(&mut output).unwrap();
-      String::from_utf8(output).unwrap()
+      s.map(&MapOptions {
+        columns: true,
+        ..Default::default()
+      })
+      .unwrap()
+      .to_json(None)
+      .unwrap()
     })
     .collect();
   dbg!(ss);

@@ -1,5 +1,5 @@
+use parcel_sourcemap::SourceMap;
 use smol_str::SmolStr;
-use sourcemap::SourceMap;
 
 use crate::{utils::Lrc, Error, MapOptions, Source};
 
@@ -23,11 +23,15 @@ impl RawSource {
 
 impl Source for RawSource {
   #[tracing::instrument(skip_all)]
-  fn map(&mut self, _option: &MapOptions) -> Option<Lrc<SourceMap>> {
+  fn map(&mut self, _option: &MapOptions) -> Option<SourceMap> {
     None
   }
 
-  fn source(&mut self) -> SmolStr {
-    self.source_code.clone()
+  fn source(&mut self) -> String {
+    self.source_code.to_string()
+  }
+
+  fn size(&self) -> usize {
+    self.source_code.len()
   }
 }
