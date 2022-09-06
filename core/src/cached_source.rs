@@ -1,24 +1,19 @@
-use smol_str::SmolStr;
-use std::collections::HashMap;
-use std::rc::Rc;
+use std::{borrow::Cow, collections::HashMap};
 
-use sourcemap::SourceMap;
+use parking_lot::Mutex;
 
-use crate::source::GenMapOption;
-use crate::Source;
+use crate::{MapOptions, Source, SourceMap};
 
-pub struct CachedSource<T: Source> {
+pub struct CachedSource<T> {
   inner: T,
-  cached_map: HashMap<GenMapOption, Option<Rc<SourceMap>>>,
-  cached_code: Option<SmolStr>,
+  cached_maps: Mutex<HashMap<MapOptions, Option<SourceMap>>>,
 }
 
-impl<T: Source> CachedSource<T> {
-  pub fn new(source: T) -> Self {
+impl<T> CachedSource<T> {
+  pub fn new(inner: T) -> Self {
     Self {
-      inner: source,
-      cached_code: Default::default(),
-      cached_map: Default::default(),
+      inner,
+      cached_maps: Mutex::new(HashMap::new()),
     }
   }
 
@@ -28,22 +23,26 @@ impl<T: Source> CachedSource<T> {
 }
 
 impl<T: Source> Source for CachedSource<T> {
-  fn map(&mut self, gen_map_option: &GenMapOption) -> Option<Rc<SourceMap>> {
-    if let Some(source_map) = self.cached_map.get(gen_map_option) {
-      source_map.as_ref().cloned()
+  fn map(&self, options: &MapOptions) -> Option<SourceMap> {
+    let mut cached_maps = self.cached_maps.lock();
+    if let Some(cache) = cached_maps.get(options) {
+      cache.to_owned()
     } else {
-      let map = self.inner.map(gen_map_option);
-      self.cached_map.insert(gen_map_option.clone(), map.clone());
+      let map = self.inner.map(options);
+      cached_maps.insert(options.to_owned(), map.clone());
       map
     }
   }
 
-  fn source(&mut self) -> SmolStr {
-    if let Some(cached_code) = &self.cached_code {
-      return cached_code.clone();
-    }
-    let code = self.inner.source();
-    self.cached_code = Some(code.clone());
-    code
+  fn buffer(&self) -> &[u8] {
+    self.inner.buffer()
+  }
+
+  fn source(&self) -> Cow<str> {
+    self.inner.source()
+  }
+
+  fn size(&self) -> usize {
+    self.inner.size()
   }
 }

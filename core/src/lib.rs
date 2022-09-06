@@ -14,5 +14,5 @@ pub use concat_source::ConcatSource;
 pub use original_source::OriginalSource;
 pub use raw_source::RawSource;
 pub use result::{Error, RspackSourcesError};
-pub use source::{GenMapOption, Source};
-pub use source_map_source::{SourceMapSource, SourceMapSourceOptions, SourceMapSourceSliceOptions};
+pub use source::{BoxSource, MapOptions, Source, SourceMap};
+pub use source_map_source::{SourceMapSource, SourceMapSourceOptions};
