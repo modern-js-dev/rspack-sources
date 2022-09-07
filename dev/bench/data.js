@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660818876133,
+  "lastUpdate": 1662532641173,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3377,6 +3377,37 @@ window.BENCHMARK_DATA = {
             "value": 9958,
             "range": "± 51",
             "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "44369998+konicyQWQ@users.noreply.github.com",
+            "name": "Shi Meng",
+            "username": "konicyQWQ"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2eb47ddf8bd5b0525ca64880fb8a3614e4d195d7",
+          "message": "feat: support replaceSource (close #10) (#14)\n\n* support replaceSource\r\n\r\n* fix clippy and test",
+          "timestamp": "2022-09-07T14:33:16+08:00",
+          "tree_id": "12c1d7203156d0a1c6d9c5b31a2e29010ad7539a",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/2eb47ddf8bd5b0525ca64880fb8a3614e4d195d7"
+        },
+        "date": 1662532639376,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "add#node",
+            "value": 643228722,
+            "range": "±0.97%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
           }
         ]
       }
