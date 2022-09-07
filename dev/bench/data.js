@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1662532641173,
+  "lastUpdate": 1662532686953,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3408,6 +3408,66 @@ window.BENCHMARK_DATA = {
             "range": "±0.97%",
             "unit": "ops/sec",
             "extra": "90 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "44369998+konicyQWQ@users.noreply.github.com",
+            "name": "Shi Meng",
+            "username": "konicyQWQ"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2eb47ddf8bd5b0525ca64880fb8a3614e4d195d7",
+          "message": "feat: support replaceSource (close #10) (#14)\n\n* support replaceSource\r\n\r\n* fix clippy and test",
+          "timestamp": "2022-09-07T14:33:16+08:00",
+          "tree_id": "12c1d7203156d0a1c6d9c5b31a2e29010ad7539a",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/2eb47ddf8bd5b0525ca64880fb8a3614e4d195d7"
+        },
+        "date": 1662532685749,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 14431,
+            "range": "± 982",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 11717,
+            "range": "± 1867",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13562,
+            "range": "± 1899",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 10887,
+            "range": "± 7046",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_url",
+            "value": 15183,
+            "range": "± 5739",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_url_with_cache",
+            "value": 12245,
+            "range": "± 1116",
+            "unit": "ns/iter"
           }
         ]
       }
