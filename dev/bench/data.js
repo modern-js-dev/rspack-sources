@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663151574428,
+  "lastUpdate": 1663151978849,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3599,6 +3599,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3615,
             "range": "± 291",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "cfd69a7f5726cb326ff9df7a651ef0a3c85093ff",
+          "message": "Next (#16)\n\nport from webpack-sources",
+          "timestamp": "2022-09-14T18:37:42+08:00",
+          "tree_id": "7a75b7f80c4b85e66269d92331ec03f219356301",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/cfd69a7f5726cb326ff9df7a651ef0a3c85093ff"
+        },
+        "date": 1663151976989,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 32397,
+            "range": "± 6904",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18615,
+            "range": "± 2568",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15036,
+            "range": "± 2841",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3258,
+            "range": "± 619",
             "unit": "ns/iter"
           }
         ]
