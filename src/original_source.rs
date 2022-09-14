@@ -48,7 +48,7 @@ impl Source for OriginalSource {
 
 impl Hash for OriginalSource {
   fn hash<H: Hasher>(&self, state: &mut H) {
-    "OriginalSource".hash(state);
+    std::any::type_name::<Self>().hash(state);
     self.buffer().hash(state);
     self.name.hash(state);
   }
