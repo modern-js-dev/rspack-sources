@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663213038282,
+  "lastUpdate": 1663231455026,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3743,6 +3743,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2776,
             "range": "± 16",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "a96597ea121460bc8255ca364fc88db105ac0660",
+          "message": "chore: add docs",
+          "timestamp": "2022-08-29T10:51:59Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/17/commits/a96597ea121460bc8255ca364fc88db105ac0660"
+        },
+        "date": 1663231454077,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25418,
+            "range": "± 165",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14861,
+            "range": "± 149",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13681,
+            "range": "± 63",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3159,
+            "range": "± 15",
             "unit": "ns/iter"
           }
         ]
