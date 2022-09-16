@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663318068034,
+  "lastUpdate": 1663331520120,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -3919,6 +3919,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3230,
             "range": "± 18",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c2751cdee9321cf0d11648baa84f68229d4e73a1",
+          "message": "chore: add docs and publish ci (#17)\n\n* chore: add docs\r\n\r\n* default for concatsource\r\n\r\n* fix doc test\r\n\r\n* chore: publish ci",
+          "timestamp": "2022-09-16T20:31:14+08:00",
+          "tree_id": "07403f4a172c5c9330cf87023fbb328e7b4ee6ad",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/c2751cdee9321cf0d11648baa84f68229d4e73a1"
+        },
+        "date": 1663331519480,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25446,
+            "range": "± 176",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14823,
+            "range": "± 71",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13626,
+            "range": "± 57",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3183,
+            "range": "± 27",
             "unit": "ns/iter"
           }
         ]
