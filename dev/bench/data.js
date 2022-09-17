@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663336311133,
+  "lastUpdate": 1663405001475,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4059,6 +4059,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2832,
             "range": "± 34",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f87584dd7bdd012da915e88bd695e42d8306964d",
+          "message": "fix: source not impl on BoxSource (#18)",
+          "timestamp": "2022-09-17T16:55:59+08:00",
+          "tree_id": "1e7b10e59b2f7aaed3d10678f25d08ba1d7e39ca",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/f87584dd7bdd012da915e88bd695e42d8306964d"
+        },
+        "date": 1663405001006,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25132,
+            "range": "± 196",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14576,
+            "range": "± 77",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13382,
+            "range": "± 102",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2859,
+            "range": "± 13",
             "unit": "ns/iter"
           }
         ]
