@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663579970396,
+  "lastUpdate": 1663584123313,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4155,6 +4155,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3549,
             "range": "± 549",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "c96005b32b86616fbd6c9eb8aa56d49e7d254bff",
+          "message": "feat: add get mut methods for SourceMap",
+          "timestamp": "2022-09-16T15:36:47Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/19/commits/c96005b32b86616fbd6c9eb8aa56d49e7d254bff"
+        },
+        "date": 1663584121508,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 33735,
+            "range": "± 6369",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 20120,
+            "range": "± 5434",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 14258,
+            "range": "± 4002",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3087,
+            "range": "± 641",
             "unit": "ns/iter"
           }
         ]
