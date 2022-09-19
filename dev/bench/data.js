@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663584123313,
+  "lastUpdate": 1663584698232,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4199,6 +4199,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3087,
             "range": "± 641",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b90f214bc05d1ebdaa092326dc1d552f1968b4c3",
+          "message": "feat: add get mut methods for SourceMap (#19)",
+          "timestamp": "2022-09-19T18:50:56+08:00",
+          "tree_id": "cf7e304831066c143dce0b8bb8c7279684b9fcc7",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/b90f214bc05d1ebdaa092326dc1d552f1968b4c3"
+        },
+        "date": 1663584697778,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25128,
+            "range": "± 258",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14596,
+            "range": "± 65",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13294,
+            "range": "± 76",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2839,
+            "range": "± 23",
             "unit": "ns/iter"
           }
         ]
