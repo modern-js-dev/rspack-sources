@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663588014443,
+  "lastUpdate": 1663910888899,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4295,6 +4295,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2799,
             "range": "± 45",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "d80a84a87f7ae6c980a2fc2d37878029adc719b8",
+          "message": "fix: SourceMapSource map source index wrong",
+          "timestamp": "2022-09-16T15:36:47Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/20/commits/d80a84a87f7ae6c980a2fc2d37878029adc719b8"
+        },
+        "date": 1663910886992,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 31081,
+            "range": "± 4231",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17461,
+            "range": "± 1236",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 17912,
+            "range": "± 1439",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3693,
+            "range": "± 451",
             "unit": "ns/iter"
           }
         ]
