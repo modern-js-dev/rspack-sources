@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663910888899,
+  "lastUpdate": 1663984494694,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4339,6 +4339,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3693,
             "range": "± 451",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "20c0a2a9b62a2cec3fba6a629e14a663ba10c4a1",
+          "message": "fix: SourceMapSource map source index wrong (#20)",
+          "timestamp": "2022-09-24T09:53:24+08:00",
+          "tree_id": "5457041e1d0500ec84799fc27c649759bca65b5d",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/20c0a2a9b62a2cec3fba6a629e14a663ba10c4a1"
+        },
+        "date": 1663984492805,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 30838,
+            "range": "± 6674",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 16812,
+            "range": "± 4068",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15644,
+            "range": "± 4953",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3268,
+            "range": "± 577",
             "unit": "ns/iter"
           }
         ]
