@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664290571617,
+  "lastUpdate": 1664290618052,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4711,6 +4711,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 4315,
             "range": "± 516",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e1e396cdfa69b58def13366e83f5b3c992c93205",
+          "message": "fix: have map when columns is false and last_line_start is none (#23)",
+          "timestamp": "2022-09-27T22:55:46+08:00",
+          "tree_id": "adbb097e31b971287cf1ae06ab66b7e603114d07",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/e1e396cdfa69b58def13366e83f5b3c992c93205"
+        },
+        "date": 1664290617527,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 33380,
+            "range": "± 2730",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19716,
+            "range": "± 1262",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15404,
+            "range": "± 1311",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4000,
+            "range": "± 415",
             "unit": "ns/iter"
           }
         ]
