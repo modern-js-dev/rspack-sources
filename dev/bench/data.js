@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664278642740,
+  "lastUpdate": 1664283836580,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4619,6 +4619,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3327,
             "range": "± 648",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "d5b9d7d0155045bbcf1fd0499623b431673a2b1f",
+          "message": "fix: should have map when columns is false and last_line_start is none",
+          "timestamp": "2022-09-16T15:36:47Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/23/commits/d5b9d7d0155045bbcf1fd0499623b431673a2b1f"
+        },
+        "date": 1664283835686,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 32734,
+            "range": "± 4803",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19625,
+            "range": "± 1073",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15451,
+            "range": "± 3992",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3764,
+            "range": "± 624",
             "unit": "ns/iter"
           }
         ]
