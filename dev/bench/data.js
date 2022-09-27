@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664283836580,
+  "lastUpdate": 1664290571617,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4663,6 +4663,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3764,
             "range": "± 624",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "661fc13d994d322320756b6fbeaef513c078213b",
+          "message": "fix: serialized json should not contain sourcesContent when it is empty (#22)",
+          "timestamp": "2022-09-27T22:54:35+08:00",
+          "tree_id": "0def08fcee8c7338d50fe3415a6d16d4f58a3973",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/661fc13d994d322320756b6fbeaef513c078213b"
+        },
+        "date": 1664290570552,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 37774,
+            "range": "± 5233",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 20216,
+            "range": "± 3207",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 22482,
+            "range": "± 3713",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4315,
+            "range": "± 516",
             "unit": "ns/iter"
           }
         ]
