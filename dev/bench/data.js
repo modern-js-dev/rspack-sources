@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664207395048,
+  "lastUpdate": 1664278642740,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4575,6 +4575,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3755,
             "range": "± 267",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "8f16fb77e204e065a690344478cf19aa35a288cc",
+          "message": "fix: serialized json should not contain sourcesContent when it is empty",
+          "timestamp": "2022-09-16T15:36:47Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/22/commits/8f16fb77e204e065a690344478cf19aa35a288cc"
+        },
+        "date": 1664278642142,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 32699,
+            "range": "± 3509",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19417,
+            "range": "± 2169",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13818,
+            "range": "± 3132",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3327,
+            "range": "± 648",
             "unit": "ns/iter"
           }
         ]
