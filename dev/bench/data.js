@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664450992057,
+  "lastUpdate": 1664453254584,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -4947,6 +4947,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3102,
             "range": "± 13",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "b8b6c3e7f43ec546159db3cfc65611c778c075e4",
+          "message": "feat: impl DynEq",
+          "timestamp": "2022-09-28T18:55:31Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/24/commits/b8b6c3e7f43ec546159db3cfc65611c778c075e4"
+        },
+        "date": 1664453254124,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25209,
+            "range": "± 176",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14721,
+            "range": "± 66",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13856,
+            "range": "± 62",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3166,
+            "range": "± 7",
             "unit": "ns/iter"
           }
         ]
