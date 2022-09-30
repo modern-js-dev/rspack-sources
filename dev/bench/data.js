@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664522986453,
+  "lastUpdate": 1664523963735,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5083,6 +5083,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3081,
             "range": "± 244",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "0d01a4d0ff039e5ef790d27843f647e34253a13c",
+          "message": "perf: use once_cell to cache and use hashbrown",
+          "timestamp": "2022-09-28T18:55:31Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/25/commits/0d01a4d0ff039e5ef790d27843f647e34253a13c"
+        },
+        "date": 1664523962750,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 32426,
+            "range": "± 11209",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19807,
+            "range": "± 2218",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15764,
+            "range": "± 2584",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4209,
+            "range": "± 345",
             "unit": "ns/iter"
           }
         ]
