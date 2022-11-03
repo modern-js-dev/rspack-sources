@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1667462481945,
+  "lastUpdate": 1667462983985,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5499,6 +5499,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3289,
             "range": "± 15",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andywangsy@gmail.com",
+            "name": "Hana",
+            "username": "h-a-n-a"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a85230816b8cc220f6e9c461f26407577716e341",
+          "message": "feat: support custom source impls (#28)\n\n* feat: expose `StreamChunks` related types\r\n\r\n* feat: add default impl for streamChunks\r\n\r\n* chore: add test for compat source\r\n\r\n* chore: docs",
+          "timestamp": "2022-11-03T16:08:38+08:00",
+          "tree_id": "b0319d9fd1094f16e6667322567efe9f91c26b53",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/a85230816b8cc220f6e9c461f26407577716e341"
+        },
+        "date": 1667462982671,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 29848,
+            "range": "± 3223",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17548,
+            "range": "± 1226",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 15919,
+            "range": "± 1236",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3821,
+            "range": "± 483",
             "unit": "ns/iter"
           }
         ]
