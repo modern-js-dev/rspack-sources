@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1668072498764,
+  "lastUpdate": 1668086398565,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5639,6 +5639,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3458,
             "range": "± 29",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Ahab",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fa3720b027407974b12aa78d3935cefb9440bcde",
+          "message": "fix: use substring instead of slice (#29)",
+          "timestamp": "2022-11-10T21:18:23+08:00",
+          "tree_id": "5137f269ce01b68087db6a6f5d21def3420c8bf2",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/fa3720b027407974b12aa78d3935cefb9440bcde"
+        },
+        "date": 1668086397997,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 24415,
+            "range": "± 271",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15162,
+            "range": "± 154",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12725,
+            "range": "± 61",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3400,
+            "range": "± 25",
             "unit": "ns/iter"
           }
         ]
