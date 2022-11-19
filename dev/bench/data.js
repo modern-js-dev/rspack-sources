@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1668086516689,
+  "lastUpdate": 1668866313409,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5735,6 +5735,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 4011,
             "range": "± 488",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "committer": {
+            "name": "speedy-js",
+            "username": "speedy-js"
+          },
+          "id": "f14cbda2f4e40f010eebe1e45e82cece4f93fb90",
+          "message": "chore: update toolchain and deps",
+          "timestamp": "2022-11-12T14:35:38Z",
+          "url": "https://github.com/speedy-js/rspack-sources/pull/30/commits/f14cbda2f4e40f010eebe1e45e82cece4f93fb90"
+        },
+        "date": 1668866312665,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 27424,
+            "range": "± 181",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17684,
+            "range": "± 140",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12857,
+            "range": "± 59",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3009,
+            "range": "± 49",
             "unit": "ns/iter"
           }
         ]
