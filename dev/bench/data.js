@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1669640278399,
+  "lastUpdate": 1669642142704,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5959,6 +5959,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3552,
             "range": "± 26",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "distinct": true,
+          "id": "493e02c7f0829bc94a29c8bace48736fa1c82cb2",
+          "message": "chore: publish",
+          "timestamp": "2022-11-28T21:28:04+08:00",
+          "tree_id": "a3aef328e3c5b384d05bbacc43763da13132f62a",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/493e02c7f0829bc94a29c8bace48736fa1c82cb2"
+        },
+        "date": 1669642141541,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 24656,
+            "range": "± 325",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15176,
+            "range": "± 112",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12962,
+            "range": "± 62",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3479,
+            "range": "± 15",
             "unit": "ns/iter"
           }
         ]
