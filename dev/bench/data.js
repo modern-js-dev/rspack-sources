@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1669639568182,
+  "lastUpdate": 1669640278399,
   "repoUrl": "https://github.com/speedy-js/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -5911,6 +5911,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3404,
             "range": "± 23",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "iwanabethatguy@qq.com",
+            "name": "IWANABETHATGUY",
+            "username": "IWANABETHATGUY"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9258680ead0c6050bbef2f5e56bba395d7c95346",
+          "message": "perf: original_source_lines clone (#31)\n\n* chore: 🤖 init\r\n\r\n* chore: 🤖 cargo clippy\r\n\r\n* chore: 🤖 remove comments",
+          "timestamp": "2022-11-28T20:55:27+08:00",
+          "tree_id": "b9145496af35226697998f883d77f24d6d9932b9",
+          "url": "https://github.com/speedy-js/rspack-sources/commit/9258680ead0c6050bbef2f5e56bba395d7c95346"
+        },
+        "date": 1669640277832,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 28456,
+            "range": "± 218",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18180,
+            "range": "± 81",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13897,
+            "range": "± 55",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3552,
+            "range": "± 26",
             "unit": "ns/iter"
           }
         ]
