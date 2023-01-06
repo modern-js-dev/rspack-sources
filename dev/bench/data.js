@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672982951134,
+  "lastUpdate": 1672982997516,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6402,6 +6402,50 @@ window.BENCHMARK_DATA = {
           {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3315,
+            "range": "± 21",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "committer": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "id": "673a2cd88a38a826536e5481b080aee03b90cbd5",
+          "message": "perf: reduce memory allocation",
+          "timestamp": "2023-01-05T12:42:18Z",
+          "url": "https://github.com/modern-js-dev/rspack-sources/pull/32/commits/673a2cd88a38a826536e5481b080aee03b90cbd5"
+        },
+        "date": 1672982996597,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23165,
+            "range": "± 173",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14901,
+            "range": "± 85",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11355,
+            "range": "± 80",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3277,
             "range": "± 21",
             "unit": "ns/iter"
           }
