@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673014953458,
+  "lastUpdate": 1673015440326,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6727,6 +6727,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3468,
             "range": "± 24",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "distinct": true,
+          "id": "4460f02c584116c987e12d7a447386dce6e03e6e",
+          "message": "perf: reduce allocation pressure by changing usage of Iterator::fold to concat",
+          "timestamp": "2023-01-06T22:29:23+08:00",
+          "tree_id": "32e664d8fbd56594445d3bece4170d8bd57e59ce",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/4460f02c584116c987e12d7a447386dce6e03e6e"
+        },
+        "date": 1673015439201,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 30624,
+            "range": "± 2835",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19688,
+            "range": "± 1478",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13702,
+            "range": "± 3686",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3357,
+            "range": "± 568",
             "unit": "ns/iter"
           }
         ]
