@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672982997516,
+  "lastUpdate": 1672986703059,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6447,6 +6447,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3277,
             "range": "± 21",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "iwanabethatguy@qq.com",
+            "name": "IWANABETHATGUY",
+            "username": "IWANABETHATGUY"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "eda4333577cb95fa83107a2996fdae354b610c90",
+          "message": "perf: reduce memory allocation (#32)\n\n* chore: 🤖 init\r\n\r\n* chore: 🤖 init\r\n\r\n* chore: 🤖 reduce alloc\r\n\r\n* chore: 🤖 init\r\n\r\n* chore: 🤖 finish iter allocation\r\n\r\n* chore: 🤖 use memchr\r\n\r\n* chore: 🤖 reuse nums array\r\n\r\n* chore: 🤖 pre allocation\r\n\r\n* chore: 🤖 reduce to 4\r\n\r\n* chore: 🤖 clippy\r\n\r\n* chore: 🤖 fmt\r\n\r\n* chore: 🤖 clippy\r\n\r\n* chore: 🤖 fmt",
+          "timestamp": "2023-01-06T14:30:19+08:00",
+          "tree_id": "953284f2134f84b37de356e6faf0fa7a97670db9",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/eda4333577cb95fa83107a2996fdae354b610c90"
+        },
+        "date": 1672986702455,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23265,
+            "range": "± 145",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14934,
+            "range": "± 85",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11362,
+            "range": "± 43",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3313,
+            "range": "± 18",
             "unit": "ns/iter"
           }
         ]
