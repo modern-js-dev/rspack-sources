@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672993964734,
+  "lastUpdate": 1672994255424,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6587,6 +6587,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2839,
             "range": "± 441",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "distinct": true,
+          "id": "542fcaa900ae313439a224cb3210068d37f8da30",
+          "message": "chore(rust): Bump Rust nightly to Version 1.66.0 (2022-12-15)\n\ncloses #33",
+          "timestamp": "2023-01-06T16:36:36+08:00",
+          "tree_id": "97a3e7deefc3514a2de57f426c8f35595c7c7476",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/542fcaa900ae313439a224cb3210068d37f8da30"
+        },
+        "date": 1672994254569,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 26781,
+            "range": "± 185",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17662,
+            "range": "± 118",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12143,
+            "range": "± 70",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3009,
+            "range": "± 46",
             "unit": "ns/iter"
           }
         ]
