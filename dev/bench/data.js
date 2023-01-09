@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673255276518,
+  "lastUpdate": 1673256115383,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6915,6 +6915,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3788,
             "range": "± 650",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "committer": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "id": "360f1ae4a54ddf27300b62a277d582794f2cfa28",
+          "message": "refactor: remove `SmolStr` from CachedSource",
+          "timestamp": "2023-01-06T08:13:57Z",
+          "url": "https://github.com/modern-js-dev/rspack-sources/pull/39/commits/360f1ae4a54ddf27300b62a277d582794f2cfa28"
+        },
+        "date": 1673256114480,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23048,
+            "range": "± 139",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 14800,
+            "range": "± 93",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11218,
+            "range": "± 55",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3034,
+            "range": "± 13",
             "unit": "ns/iter"
           }
         ]
