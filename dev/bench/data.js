@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673256115383,
+  "lastUpdate": 1673264233335,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6959,6 +6959,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3034,
             "range": "± 13",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "distinct": true,
+          "id": "fad6d1682b0f6ddfc0d53b7f5228d4a238365408",
+          "message": "refactor: remove `SmolStr` from CachedSource\n\nAll source code are large strings, so the `SmolStr` optimization will never kick in\n\ncloses #37",
+          "timestamp": "2023-01-09T19:36:12+08:00",
+          "tree_id": "fffd7750fc5d1387dd6c99a1b5edbe512e049490",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/fad6d1682b0f6ddfc0d53b7f5228d4a238365408"
+        },
+        "date": 1673264232440,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 26705,
+            "range": "± 185",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17572,
+            "range": "± 205",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11977,
+            "range": "± 63",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2966,
+            "range": "± 27",
             "unit": "ns/iter"
           }
         ]
