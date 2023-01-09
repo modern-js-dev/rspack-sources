@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673015440326,
+  "lastUpdate": 1673255084427,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -6775,6 +6775,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3357,
             "range": "± 568",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "committer": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "id": "502d2763787c8feea882cbb3ca8f9724fa06d3f8",
+          "message": "fix: dead loop when cheap-module-source-map",
+          "timestamp": "2023-01-06T08:13:57Z",
+          "url": "https://github.com/modern-js-dev/rspack-sources/pull/38/commits/502d2763787c8feea882cbb3ca8f9724fa06d3f8"
+        },
+        "date": 1673255083833,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 27119,
+            "range": "± 347",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18100,
+            "range": "± 159",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12414,
+            "range": "± 86",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3475,
+            "range": "± 20",
             "unit": "ns/iter"
           }
         ]
