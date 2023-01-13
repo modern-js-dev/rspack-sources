@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673574252784,
+  "lastUpdate": 1673586411677,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -7095,6 +7095,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3815,
             "range": "± 2238",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "distinct": true,
+          "id": "1969fb3d48fdab5bbb4d0a3b81a8aa87e1867954",
+          "message": "refactor: replace `SmolStr` with Arc<str>\n\nAll source code are large strings, so the `SmolStr` optimization will never kick in\n\nfixes #37",
+          "timestamp": "2023-01-13T12:56:23+08:00",
+          "tree_id": "a9f6ebcc82b6ed5293daf6f0be10cf7648e0bd1f",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/1969fb3d48fdab5bbb4d0a3b81a8aa87e1867954"
+        },
+        "date": 1673586410490,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 27322,
+            "range": "± 189",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18115,
+            "range": "± 82",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12506,
+            "range": "± 44",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3440,
+            "range": "± 24",
             "unit": "ns/iter"
           }
         ]
