@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673934297113,
+  "lastUpdate": 1674121233486,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -7319,6 +7319,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3367,
             "range": "± 14",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "distinct": true,
+          "id": "3e74c8552cf36ec62bc9d96ac53368a595d0cd3c",
+          "message": "feat: add `to_writer` api to `Source` trait for better file write performance\n\ncloses #41",
+          "timestamp": "2023-01-19T17:39:03+08:00",
+          "tree_id": "27eb37a322e18cd3d75f9892de3a4c2cc1386b60",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/3e74c8552cf36ec62bc9d96ac53368a595d0cd3c"
+        },
+        "date": 1674121232212,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 26909,
+            "range": "± 254",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17646,
+            "range": "± 91",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12184,
+            "range": "± 54",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2999,
+            "range": "± 28",
             "unit": "ns/iter"
           }
         ]
