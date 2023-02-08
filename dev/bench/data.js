@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1674885088719,
+  "lastUpdate": 1675850663426,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -7415,6 +7415,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 4125,
             "range": "± 138",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "committer": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "id": "887728018c913809ef1c2d77063b876945da700b",
+          "message": "perf: remove extra string clone on CachedSource and ReplaceSource",
+          "timestamp": "2023-02-07T13:47:20Z",
+          "url": "https://github.com/modern-js-dev/rspack-sources/pull/43/commits/887728018c913809ef1c2d77063b876945da700b"
+        },
+        "date": 1675850662824,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23358,
+            "range": "± 207",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15065,
+            "range": "± 80",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11703,
+            "range": "± 46",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3529,
+            "range": "± 16",
             "unit": "ns/iter"
           }
         ]
