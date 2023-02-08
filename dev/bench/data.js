@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1675850663426,
+  "lastUpdate": 1675858435961,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -7459,6 +7459,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3529,
             "range": "± 16",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "distinct": true,
+          "id": "9befb531a160b87fd3baaca3081acbc44cd1e90a",
+          "message": "fix: CachedSource line number wrong",
+          "timestamp": "2023-02-08T20:11:54+08:00",
+          "tree_id": "e21ce95ece479175754cee95d354b65c96aa04b6",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/9befb531a160b87fd3baaca3081acbc44cd1e90a"
+        },
+        "date": 1675858434834,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 26760,
+            "range": "± 161",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17668,
+            "range": "± 82",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12079,
+            "range": "± 65",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3108,
+            "range": "± 40",
             "unit": "ns/iter"
           }
         ]
