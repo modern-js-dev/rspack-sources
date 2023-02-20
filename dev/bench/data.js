@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1676006762618,
+  "lastUpdate": 1676870581005,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -7647,6 +7647,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3737,
             "range": "± 510",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "committer": {
+            "name": "modern-js-dev",
+            "username": "modern-js-dev"
+          },
+          "id": "c87686687d3808355f375d1a737f6d4a32f269fd",
+          "message": "have a try on arc source",
+          "timestamp": "2023-02-16T16:51:27Z",
+          "url": "https://github.com/modern-js-dev/rspack-sources/pull/44/commits/c87686687d3808355f375d1a737f6d4a32f269fd"
+        },
+        "date": 1676870579859,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 26697,
+            "range": "± 155",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17651,
+            "range": "± 111",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11979,
+            "range": "± 42",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2954,
+            "range": "± 16",
             "unit": "ns/iter"
           }
         ]
