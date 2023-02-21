@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1676969177935,
+  "lastUpdate": 1676969290722,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8143,6 +8143,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3007,
             "range": "± 26",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "iwanabethatguy@qq.com",
+            "name": "IWANABETHATGUY",
+            "username": "IWANABETHATGUY"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0b74b3f9a0d85339a70ba72b62db815be02044e2",
+          "message": "perf: substring (#47)\n\n* chore: 🤖 init\r\n\r\n* chore: 🤖 lint\r\n\r\n* chore: 🤖 type\r\n\r\n* chore: 🤖 fmt\r\n\r\n* chore: 🤖 add some comments on lineindices\r\n\r\n* chore: 🤖 fmt",
+          "timestamp": "2023-02-21T08:47:08Z",
+          "tree_id": "9ce9adcff7b5c0308648342521d33070ba7754b6",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/0b74b3f9a0d85339a70ba72b62db815be02044e2"
+        },
+        "date": 1676969289635,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25807,
+            "range": "± 201",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17648,
+            "range": "± 52",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11063,
+            "range": "± 37",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2960,
+            "range": "± 40",
             "unit": "ns/iter"
           }
         ]
