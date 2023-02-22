@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1677066328916,
+  "lastUpdate": 1677067923898,
   "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8327,6 +8327,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3368,
             "range": "± 13",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "1114550440@qq.com",
+            "name": "Fy",
+            "username": "JSerFeng"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7ddc48694b939c54b0bdff38d1a82c234c776ad2",
+          "message": "fix(ci): remove inconsistence in toolchain (#49)",
+          "timestamp": "2023-02-22T20:10:18+08:00",
+          "tree_id": "5150d8a2254333aeb1065751ebd60b366690df2c",
+          "url": "https://github.com/modern-js-dev/rspack-sources/commit/7ddc48694b939c54b0bdff38d1a82c234c776ad2"
+        },
+        "date": 1677067923382,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23864,
+            "range": "± 140",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15196,
+            "range": "± 82",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12156,
+            "range": "± 58",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3367,
+            "range": "± 17",
             "unit": "ns/iter"
           }
         ]
