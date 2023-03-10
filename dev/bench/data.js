@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1677482072117,
-  "repoUrl": "https://github.com/modern-js-dev/rspack-sources",
+  "lastUpdate": 1678430005092,
+  "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
       {
@@ -8551,6 +8551,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3361,
             "range": "± 30",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "81ccc0b032821daba3ee9e53cda13d383ce8316d",
+          "message": "docs: update links",
+          "timestamp": "2023-03-10T05:25:28Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/53/commits/81ccc0b032821daba3ee9e53cda13d383ce8316d"
+        },
+        "date": 1678430004105,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25818,
+            "range": "± 124",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17737,
+            "range": "± 69",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11236,
+            "range": "± 51",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2967,
+            "range": "± 20",
             "unit": "ns/iter"
           }
         ]
