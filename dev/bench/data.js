@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1678430005092,
+  "lastUpdate": 1678430403299,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8595,6 +8595,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2967,
             "range": "± 20",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jerrykingxyz@gmail.com",
+            "name": "jinrui",
+            "username": "jerrykingxyz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7e68366426226f138dc8910c5a39adc2591ed2d3",
+          "message": "docs: update links (#53)",
+          "timestamp": "2023-03-10T14:35:45+08:00",
+          "tree_id": "008583e483073b55aef770a36458c616ccfb043d",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/7e68366426226f138dc8910c5a39adc2591ed2d3"
+        },
+        "date": 1678430402224,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23869,
+            "range": "± 129",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15126,
+            "range": "± 80",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12075,
+            "range": "± 58",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3385,
+            "range": "± 14",
             "unit": "ns/iter"
           }
         ]
