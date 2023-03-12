@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1678430403299,
+  "lastUpdate": 1678620097395,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8643,6 +8643,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3385,
             "range": "± 14",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "c42f1c989018d26ad2fc736106a023042a8d0d2b",
+          "message": "pref: use once cell for source map line chunk during substring",
+          "timestamp": "2023-03-12T10:03:28Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/54/commits/c42f1c989018d26ad2fc736106a023042a8d0d2b"
+        },
+        "date": 1678620096472,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23731,
+            "range": "± 140",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15038,
+            "range": "± 118",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12010,
+            "range": "± 49",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3361,
+            "range": "± 17",
             "unit": "ns/iter"
           }
         ]
