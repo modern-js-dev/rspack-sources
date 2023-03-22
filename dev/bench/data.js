@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1679469937992,
+  "lastUpdate": 1679470101650,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8959,6 +8959,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3374,
             "range": "± 24",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Gengkun",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ed7cb9e1bcc52faafa70a603c8f14d7e50359fef",
+          "message": "fix: cheap-module-source-map too slow (#57)",
+          "timestamp": "2023-03-22T07:26:17Z",
+          "tree_id": "9a4b48aea4bd3e57fd030546b0a8857236f616c6",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/ed7cb9e1bcc52faafa70a603c8f14d7e50359fef"
+        },
+        "date": 1679470100477,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 27844,
+            "range": "± 32853",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 17674,
+            "range": "± 2894",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 14475,
+            "range": "± 3003",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4075,
+            "range": "± 910",
             "unit": "ns/iter"
           }
         ]
