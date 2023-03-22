@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1679025802468,
+  "lastUpdate": 1679469937992,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -8915,6 +8915,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3780,
             "range": "± 388",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "b23c8168048849710dbddde9a766092e084ab05c",
+          "message": "fix: cheap-module-source-map too slow",
+          "timestamp": "2023-03-15T05:27:58Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/57/commits/b23c8168048849710dbddde9a766092e084ab05c"
+        },
+        "date": 1679469937390,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23757,
+            "range": "± 206",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15071,
+            "range": "± 63",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12086,
+            "range": "± 51",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3374,
+            "range": "± 24",
             "unit": "ns/iter"
           }
         ]
