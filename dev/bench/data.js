@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1679470101650,
+  "lastUpdate": 1679470195468,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9007,6 +9007,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 4075,
             "range": "± 910",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "bohan-zhang@foxmail.com",
+            "name": "bohan",
+            "username": "bvanjoi"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "053f2fc3e714782cdc1141c027741c2fc5539c9d",
+          "message": "pref: use arc to prevent copy str (#55)",
+          "timestamp": "2023-03-22T15:27:55+08:00",
+          "tree_id": "6cad5dad9f4000c0ac5f0a756da42cede50d03fb",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/053f2fc3e714782cdc1141c027741c2fc5539c9d"
+        },
+        "date": 1679470194346,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 29859,
+            "range": "± 2831",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 20090,
+            "range": "± 904",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11956,
+            "range": "± 1625",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3659,
+            "range": "± 463",
             "unit": "ns/iter"
           }
         ]
