@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1683704970126,
+  "lastUpdate": 1683705400187,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9235,6 +9235,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 4018,
             "range": "± 194",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "Gengkun",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f53f3277ec6dec21cf8bd541828c71b363d1ab16",
+          "message": "fix: replace source with unicode (#58)",
+          "timestamp": "2023-05-10T15:53:56+08:00",
+          "tree_id": "c672fd2aa60138a7a816132771431ffbea7e1d03",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/f53f3277ec6dec21cf8bd541828c71b363d1ab16"
+        },
+        "date": 1683705399181,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 30364,
+            "range": "± 4689",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 20069,
+            "range": "± 3000",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11303,
+            "range": "± 2149",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3567,
+            "range": "± 680",
             "unit": "ns/iter"
           }
         ]
