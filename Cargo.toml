@@ -1,6 +1,6 @@
 [package]
 name = "rspack_sources"
-version = "0.2.3"
+version = "0.2.4"
 edition = "2021"
 authors = ["h-a-n-a <andywangsy@gmail.com>", "ahabhgk <ahabhgk@gmail.com>"]
 resolver = "2"
