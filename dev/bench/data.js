@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1679470665673,
+  "lastUpdate": 1683704838612,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9103,6 +9103,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3406,
             "range": "± 33",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "281787ff428d7c51fd5c86e054c498a78337c505",
+          "message": "fix: replace source with unicode",
+          "timestamp": "2023-05-05T17:30:04Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/58/commits/281787ff428d7c51fd5c86e054c498a78337c505"
+        },
+        "date": 1683704837285,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 30363,
+            "range": "± 7998",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 19886,
+            "range": "± 2929",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13765,
+            "range": "± 2476",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4267,
+            "range": "± 426",
             "unit": "ns/iter"
           }
         ]
