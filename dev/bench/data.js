@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684836168820,
+  "lastUpdate": 1684839186081,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9375,6 +9375,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3357,
             "range": "± 28",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "likui6666666@gmail.com",
+            "name": "underfin",
+            "username": "underfin"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ca0e7a9f06ceefa6411a82e955fc41e49f3adb14",
+          "message": "fix: avoid replace source add overflow (#59)",
+          "timestamp": "2023-05-23T18:46:09+08:00",
+          "tree_id": "d3b6f0e0825a319d10b0f38e93ab3557159f4913",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/ca0e7a9f06ceefa6411a82e955fc41e49f3adb14"
+        },
+        "date": 1684839185156,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25990,
+            "range": "± 71",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18109,
+            "range": "± 82",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11437,
+            "range": "± 46",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3360,
+            "range": "± 21",
             "unit": "ns/iter"
           }
         ]
