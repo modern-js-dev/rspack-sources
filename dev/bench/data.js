@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1684839186081,
+  "lastUpdate": 1684993757015,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9423,6 +9423,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3360,
             "range": "± 21",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "committer": {
+            "email": "ahabhgk@gmail.com",
+            "name": "ahabhgk",
+            "username": "ahabhgk"
+          },
+          "distinct": true,
+          "id": "81ee4e2c5536cf523ba2db79cd5a3e8759975b12",
+          "message": "chore: publish",
+          "timestamp": "2023-05-25T13:47:06+08:00",
+          "tree_id": "f7268a1d26030f5736cd4085a62cd1d64e4c8bca",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/81ee4e2c5536cf523ba2db79cd5a3e8759975b12"
+        },
+        "date": 1684993755994,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 25564,
+            "range": "± 2889",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 16978,
+            "range": "± 1480",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 13492,
+            "range": "± 1392",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3890,
+            "range": "± 253",
             "unit": "ns/iter"
           }
         ]
