@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1686571087984,
+  "lastUpdate": 1686571368344,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9515,6 +9515,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3380,
             "range": "± 29",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "fbbc1c21627306a555bca37912a163f37245aaa8",
+          "message": "fix: replace source should hash inner source",
+          "timestamp": "2023-06-12T03:28:12Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/60/commits/fbbc1c21627306a555bca37912a163f37245aaa8"
+        },
+        "date": 1686571367715,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 23621,
+            "range": "± 274",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15088,
+            "range": "± 72",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 11898,
+            "range": "± 145",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3382,
+            "range": "± 15",
             "unit": "ns/iter"
           }
         ]
