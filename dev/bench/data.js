@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1686571368344,
+  "lastUpdate": 1686571700175,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9559,6 +9559,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3382,
             "range": "± 15",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "likui6666666@gmail.com",
+            "name": "underfin",
+            "username": "underfin"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c41733105898850fa3c3b783995f6199b2e18978",
+          "message": "fix: replace source should hash inner source (#60)\n\n* fix: replace source should hash inner source\r\n\r\n* fix test\r\n\r\n---------\r\n\r\nCo-authored-by: ahabhgk <ahabhgk@gmail.com>",
+          "timestamp": "2023-06-12T20:04:55+08:00",
+          "tree_id": "d9e79c81f857e4a44c88d9c265e1fa38f057bf8b",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/c41733105898850fa3c3b783995f6199b2e18978"
+        },
+        "date": 1686571699071,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 28553,
+            "range": "± 184",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18136,
+            "range": "± 118",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 14390,
+            "range": "± 92",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4079,
+            "range": "± 69",
             "unit": "ns/iter"
           }
         ]
