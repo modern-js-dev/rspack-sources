@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1693883157559,
+  "lastUpdate": 1694170628304,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9699,6 +9699,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3466,
             "range": "± 15",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jerrykingxyz@gmail.com",
+            "name": "jinrui",
+            "username": "jerrykingxyz"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "74c8edd18b3b7486b33de709d0d509c27d16fb80",
+          "message": "perf: to_writer use utf8 offset and WithIndices use OnceCell (#62)\n\n* perf: to_writer use utf8 offset\r\n\r\n* perf: WithIndices use OnceCell",
+          "timestamp": "2023-09-08T18:52:57+08:00",
+          "tree_id": "32d7757f35c07d54fdf0cb04a2e97c37ecc31bda",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/74c8edd18b3b7486b33de709d0d509c27d16fb80"
+        },
+        "date": 1694170627116,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 29300,
+            "range": "± 561",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 18292,
+            "range": "± 124",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 14878,
+            "range": "± 86",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 4133,
+            "range": "± 19",
             "unit": "ns/iter"
           }
         ]
