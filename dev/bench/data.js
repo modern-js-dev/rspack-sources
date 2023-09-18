@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1695011805477,
+  "lastUpdate": 1695014350912,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9883,6 +9883,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3376,
             "range": "± 20",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d2ca2a0683dcd846632a8189a99eb4eb38fbbb36",
+          "message": "perf: reduce memory allocation while generating sourcemaps (#63)",
+          "timestamp": "2023-09-18T13:15:15+08:00",
+          "tree_id": "fee2aed65f05d498e0c1d8d1ecbed20338d7a4c1",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/d2ca2a0683dcd846632a8189a99eb4eb38fbbb36"
+        },
+        "date": 1695014349976,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 24093,
+            "range": "± 137",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15034,
+            "range": "± 68",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 12453,
+            "range": "± 35",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 3445,
+            "range": "± 18",
             "unit": "ns/iter"
           }
         ]
