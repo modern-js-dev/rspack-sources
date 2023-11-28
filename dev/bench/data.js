@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1695014350912,
+  "lastUpdate": 1701152970573,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -9931,6 +9931,50 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 3445,
             "range": "± 18",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "committer": {
+            "name": "web-infra-dev",
+            "username": "web-infra-dev"
+          },
+          "id": "b50b93e5b7852eb73071b64fc959008bff85a29f",
+          "message": "docs: fix `cargo doc` lint warnings",
+          "timestamp": "2023-07-25T14:57:03Z",
+          "url": "https://github.com/web-infra-dev/rspack-sources/pull/64/commits/b50b93e5b7852eb73071b64fc959008bff85a29f"
+        },
+        "date": 1701152969892,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 22130,
+            "range": "± 189",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 15977,
+            "range": "± 222",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 8605,
+            "range": "± 100",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2908,
+            "range": "± 31",
             "unit": "ns/iter"
           }
         ]
