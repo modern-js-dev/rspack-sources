@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1701153643151,
+  "lastUpdate": 1701154295775,
   "repoUrl": "https://github.com/web-infra-dev/rspack-sources",
   "entries": {
     "Benchmark": [
@@ -10111,6 +10111,54 @@ window.BENCHMARK_DATA = {
             "name": "benchmark_concat_generate_string_with_cache",
             "value": 2910,
             "range": "± 42",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "boshenc@gmail.com",
+            "name": "Boshen",
+            "username": "Boshen"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4f08179fd2ff267e35727ef8a9129f7aa45b3e07",
+          "message": "chore: clean up github workflows (#65)",
+          "timestamp": "2023-11-28T14:47:03+08:00",
+          "tree_id": "ac8e5a952b607fe636b397dc30b3dfbfe7c9467f",
+          "url": "https://github.com/web-infra-dev/rspack-sources/commit/4f08179fd2ff267e35727ef8a9129f7aa45b3e07"
+        },
+        "date": 1701154295226,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "benchmark_concat_generate_base64",
+            "value": 22143,
+            "range": "± 580",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_base64_with_cache",
+            "value": 16142,
+            "range": "± 269",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string",
+            "value": 9089,
+            "range": "± 149",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "benchmark_concat_generate_string_with_cache",
+            "value": 2952,
+            "range": "± 34",
             "unit": "ns/iter"
           }
         ]
