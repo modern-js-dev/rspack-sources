@@ -195,6 +195,45 @@ fn benchmark_replace_large_minified_source(b: &mut Bencher) {
   });
 }
 
+fn benchmark_concat_large_minified_source(b: &mut Bencher) {
+  let sms_minify = SourceMapSource::new(SourceMapSourceOptions {
+    value: HELLOWORLD_MIN_JS,
+    name: "helloworld.min.js",
+    source_map: SourceMap::from_json(HELLOWORLD_MIN_JS_MAP).unwrap(),
+    original_source: Some(HELLOWORLD_JS.to_string()),
+    inner_source_map: Some(SourceMap::from_json(HELLOWORLD_JS_MAP).unwrap()),
+    remove_original_source: false,
+  });
+
+  let sms_rollup = SourceMapSource::new(SourceMapSourceOptions {
+    value: BUNDLE_JS,
+    name: "bundle.js",
+    source_map: SourceMap::from_json(BUNDLE_JS_MAP).unwrap(),
+    original_source: None,
+    inner_source_map: None,
+    remove_original_source: false,
+  });
+
+  let antd_minify = SourceMapSource::new(SourceMapSourceOptions {
+    value: ANTD_MIN_JS,
+    name: "antd.min.js",
+    source_map: SourceMap::from_json(ANTD_MIN_JS_MAP).unwrap(),
+    original_source: None,
+    inner_source_map: None,
+    remove_original_source: false,
+  });
+
+  let concat = ConcatSource::new([antd_minify, sms_minify, sms_rollup]);
+
+  b.iter(|| {
+    concat
+      .map(&MapOptions::default())
+      .unwrap()
+      .to_json()
+      .unwrap();
+  })
+}
+
 fn bench_rspack_sources(criterion: &mut Criterion) {
   let mut group = criterion.benchmark_group("rspack_sources");
   group.bench_function(
@@ -212,6 +251,10 @@ fn bench_rspack_sources(criterion: &mut Criterion) {
   group.bench_function(
     "replace_large_minified_source",
     benchmark_replace_large_minified_source,
+  );
+  group.bench_function(
+    "concat_large_minified_source",
+    benchmark_concat_large_minified_source,
   );
   group.finish();
 }

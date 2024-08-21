@@ -951,10 +951,10 @@ pub fn stream_chunks_of_combined_source_map(
   let source_mapping: RefCell<HashMap<ArcStr, u32>> =
     RefCell::new(HashMap::default());
   let mut name_mapping: HashMap<ArcStr, u32> = HashMap::default();
-  let source_index_mapping: RefCell<HashMap<i64, i64>> =
-    RefCell::new(HashMap::default());
-  let name_index_mapping: RefCell<HashMap<i64, i64>> =
-    RefCell::new(HashMap::default());
+  let source_index_mapping: RefCell<Vec<i64>> =
+    RefCell::new(Vec::with_capacity(source_map.sources().len()));
+  let name_index_mapping: RefCell<Vec<i64>> =
+    RefCell::new(Vec::with_capacity(source_map.names().len()));
   let name_index_value_mapping: RefCell<HashMap<i64, ArcStr>> =
     RefCell::new(HashMap::default());
   let inner_source_index: RefCell<i64> = RefCell::new(-2);
@@ -1177,8 +1177,10 @@ pub fn stream_chunks_of_combined_source_map(
                   });
                 if name.as_ref() == original_name {
                   let mut name_index_mapping = name_index_mapping.borrow_mut();
-                  final_name_index =
-                    name_index_mapping.get(&name_index).copied().unwrap_or(-2);
+                  final_name_index = name_index_mapping
+                    .get(name_index as usize)
+                    .copied()
+                    .unwrap_or(-2);
                   if final_name_index == -2 {
                     if let Some(name) =
                       name_index_value_mapping.get(&name_index)
@@ -1194,7 +1196,8 @@ pub fn stream_chunks_of_combined_source_map(
                     } else {
                       final_name_index = -1;
                     }
-                    name_index_mapping.insert(name_index, final_name_index);
+                    name_index_mapping
+                      .insert(name_index as usize, final_name_index);
                   }
                 }
               }
@@ -1230,7 +1233,7 @@ pub fn stream_chunks_of_combined_source_map(
           return;
         } else {
           let mut source_index_mapping = source_index_mapping.borrow_mut();
-          if source_index_mapping.get(&source_index) == Some(&-2) {
+          if source_index_mapping.get(source_index as usize) == Some(&-2) {
             let mut source_mapping = source_mapping.borrow_mut();
             let mut global_index =
               source_mapping.get(inner_source_name).copied();
@@ -1245,14 +1248,14 @@ pub fn stream_chunks_of_combined_source_map(
               global_index = Some(len);
             }
             source_index_mapping
-              .insert(source_index, global_index.unwrap() as i64);
+              .insert(source_index as usize, global_index.unwrap() as i64);
           }
         }
       }
 
+      let source_index_mapping = source_index_mapping.borrow();
       let final_source_index = source_index_mapping
-        .borrow()
-        .get(&source_index)
+        .get(source_index as usize)
         .copied()
         .unwrap_or(-1);
       if final_source_index < 0 {
@@ -1268,8 +1271,10 @@ pub fn stream_chunks_of_combined_source_map(
       } else {
         // Pass through the chunk with mapping
         let mut name_index_mapping = name_index_mapping.borrow_mut();
-        let mut final_name_index =
-          name_index_mapping.get(&name_index).copied().unwrap_or(-1);
+        let mut final_name_index = name_index_mapping
+          .get(name_index as usize)
+          .copied()
+          .unwrap_or(-1);
         if final_name_index == -2 {
           let name_index_value_mapping = name_index_value_mapping.borrow();
           let name = name_index_value_mapping.get(&name_index).unwrap();
@@ -1281,7 +1286,7 @@ pub fn stream_chunks_of_combined_source_map(
             global_index = Some(len);
           }
           final_name_index = global_index.unwrap() as i64;
-          name_index_mapping.insert(name_index, final_name_index);
+          name_index_mapping.insert(name_index as usize, final_name_index);
         }
         on_chunk(
           chunk,
@@ -1310,7 +1315,7 @@ pub fn stream_chunks_of_combined_source_map(
         } else {
           *inner_source = source_content.clone();
         }
-        source_index_mapping.borrow_mut().insert(i, -2);
+        source_index_mapping.borrow_mut().insert(i as usize, -2);
         stream_chunks_of_source_map(
           &source_content.unwrap(),
           inner_source_map,
@@ -1400,12 +1405,12 @@ pub fn stream_chunks_of_combined_source_map(
         }
         source_index_mapping
           .borrow_mut()
-          .insert(i, global_index.unwrap() as i64);
+          .insert(i as usize, global_index.unwrap() as i64);
       }
     },
     &mut |i, name| {
       let i = i as i64;
-      name_index_mapping.borrow_mut().insert(i, -2);
+      name_index_mapping.borrow_mut().insert(i as usize, -2);
       name_index_value_mapping.borrow_mut().insert(i, name.into());
     },
     options,
