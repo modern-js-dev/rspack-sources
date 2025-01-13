@@ -4,7 +4,6 @@ use std::{
   borrow::Cow,
   hash::Hash,
   ops::{Bound, RangeBounds},
-  rc::Rc,
 };
 
 use crate::Error;
@@ -12,7 +11,7 @@ use crate::Error;
 #[derive(Clone, Debug)]
 pub(crate) enum Repr<'a> {
   Light(&'a str),
-  Full(Rc<Vec<(&'a str, usize)>>),
+  Full(Vec<(&'a str, usize)>),
 }
 
 /// A rope data structure.
@@ -41,13 +40,13 @@ impl<'a> Rope<'a> {
     match &mut self.repr {
       Repr::Light(s) => {
         let vec = Vec::from_iter([(*s, 0), (value, s.len())]);
-        self.repr = Repr::Full(Rc::new(vec));
+        self.repr = Repr::Full(vec);
       }
       Repr::Full(data) => {
         let len = data
           .last()
           .map_or(0, |(chunk, start_pos)| *start_pos + chunk.len());
-        Rc::make_mut(data).push((value, len));
+        data.push((value, len));
       }
     }
   }
@@ -59,7 +58,7 @@ impl<'a> Rope<'a> {
     match (&mut self.repr, value.repr) {
       (Repr::Light(s), Repr::Light(other)) => {
         let raw = Vec::from_iter([(*s, 0), (other, s.len())]);
-        self.repr = Repr::Full(Rc::new(raw));
+        self.repr = Repr::Full(raw);
       }
       (Repr::Full(s), Repr::Full(other)) => {
         if !other.is_empty() {
@@ -67,7 +66,7 @@ impl<'a> Rope<'a> {
             .last()
             .map_or(0, |(chunk, start_pos)| *start_pos + chunk.len());
 
-          let cur = Rc::make_mut(s);
+          let cur = s;
           cur.reserve_exact(other.len());
 
           for &(chunk, _) in other.iter() {
@@ -81,7 +80,7 @@ impl<'a> Rope<'a> {
           let len = s
             .last()
             .map_or(0, |(chunk, start_pos)| *start_pos + chunk.len());
-          Rc::make_mut(s).push((other, len));
+          s.push((other, len));
         }
       }
       (Repr::Light(s), Repr::Full(other)) => {
@@ -92,7 +91,7 @@ impl<'a> Rope<'a> {
           raw.push((chunk, len));
           len += chunk.len();
         }
-        self.repr = Repr::Full(Rc::new(raw));
+        self.repr = Repr::Full(raw);
       }
     }
   }
@@ -334,7 +333,7 @@ impl<'a> Rope<'a> {
         })?;
 
         Ok(Rope {
-          repr: Repr::Full(Rc::new(raw)),
+          repr: Repr::Full(raw),
         })
       }
     }
@@ -422,7 +421,7 @@ impl<'a> Rope<'a> {
         });
 
         Rope {
-          repr: Repr::Full(Rc::new(raw)),
+          repr: Repr::Full(raw),
         }
       }
     }
@@ -623,7 +622,7 @@ impl<'a> Iterator for Lines<'_, 'a> {
           // Advance the byte index to the end of the line.
           *byte_idx += len;
           Some(Rope {
-            repr: Repr::Full(Rc::new(raw)),
+            repr: Repr::Full(raw),
           })
         } else {
           // If we did not find a newline in the next few chunks,
@@ -655,7 +654,7 @@ impl<'a> Iterator for Lines<'_, 'a> {
           // Advance the byte index to the end of the rope.
           *byte_idx += len;
           Some(Rope {
-            repr: Repr::Full(Rc::new(raw)),
+            repr: Repr::Full(raw),
           })
         }
       }
@@ -960,7 +959,7 @@ impl<'a> FromIterator<&'a str> for Rope<'a> {
       .collect::<Vec<_>>();
 
     Self {
-      repr: Repr::Full(Rc::new(raw)),
+      repr: Repr::Full(raw),
     }
   }
 }
@@ -985,8 +984,6 @@ fn end_bound_to_range_end(end: Bound<&usize>) -> Option<usize> {
 
 #[cfg(test)]
 mod tests {
-  use std::rc::Rc;
-
   use crate::rope::{Repr, Rope};
 
   impl<'a> PartialEq for Repr<'a> {
@@ -1011,7 +1008,7 @@ mod tests {
     assert_eq!(simple, "abcdef");
     assert_eq!(
       simple.repr,
-      Repr::Full(Rc::new(Vec::from_iter([("abc", 0), ("def", 3)])))
+      Repr::Full(Vec::from_iter([("abc", 0), ("def", 3)]))
     );
     assert_eq!(simple.len(), 6);
 
@@ -1019,11 +1016,11 @@ mod tests {
     assert_eq!(simple, "abcdefghi");
     assert_eq!(
       simple.repr,
-      Repr::Full(Rc::new(Vec::from_iter([
+      Repr::Full(Vec::from_iter([
         ("abc", 0),
         ("def", 3),
         ("ghi", 6),
-      ])))
+      ]))
     );
     assert_eq!(simple.len(), 9);
   }
@@ -1042,7 +1039,7 @@ mod tests {
     assert_eq!(append1, "abcdef");
     assert_eq!(
       append1.repr,
-      Repr::Full(Rc::new(Vec::from_iter([("abc", 0), ("def", 3),])))
+      Repr::Full(Vec::from_iter([("abc", 0), ("def", 3),]))
     );
 
     // simple - complex
@@ -1051,12 +1048,12 @@ mod tests {
     assert_eq!(append2, "abc123");
     assert_eq!(
       append2.repr,
-      Repr::Full(Rc::new(Vec::from_iter([
+      Repr::Full(Vec::from_iter([
         ("abc", 0),
         ("1", 3),
         ("2", 4),
         ("3", 5),
-      ])))
+      ]))
     );
 
     // complex - simple
@@ -1065,12 +1062,12 @@ mod tests {
     assert_eq!(append3, "123abc");
     assert_eq!(
       append3.repr,
-      Repr::Full(Rc::new(Vec::from_iter([
+      Repr::Full(Vec::from_iter([
         ("1", 0),
         ("2", 1),
         ("3", 2),
         ("abc", 3),
-      ])))
+      ]))
     );
 
     // complex - complex
@@ -1079,14 +1076,14 @@ mod tests {
     assert_eq!(append4, "123456");
     assert_eq!(
       append4.repr,
-      Repr::Full(Rc::new(Vec::from_iter([
+      Repr::Full(Vec::from_iter([
         ("1", 0),
         ("2", 1),
         ("3", 2),
         ("4", 3),
         ("5", 4),
         ("6", 5),
-      ])))
+      ]))
     );
   }
 
@@ -1177,7 +1174,7 @@ mod tests {
     assert_eq!(rope, "abcdef");
     assert_eq!(
       rope.repr,
-      Repr::Full(Rc::new(Vec::from_iter([("abc", 0), ("def", 3)])))
+      Repr::Full(Vec::from_iter([("abc", 0), ("def", 3)]))
     );
   }
 

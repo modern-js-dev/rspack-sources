@@ -37,7 +37,7 @@ rustc-hash = "2.1.0"
 dashmap = "6.1.0"
 memchr = "2.7.4"
 itertools = "0.13"
-
+ouroboros = "0.18.4"
 
 codspeed-criterion-compat = { version = "2.7.2", default-features = false, optional = true }
 static_assertions = "1.1.0"

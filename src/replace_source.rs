@@ -302,7 +302,7 @@ fn check_content_at_position(
   lines: &[Rope],
   line: u32,
   column: u32,
-  expected: Rope, // FIXME: memory
+  expected: &Rope,
 ) -> bool {
   if let Some(line) = lines.get(line as usize - 1) {
     match line
@@ -311,7 +311,7 @@ fn check_content_at_position(
       .map(|(byte_index, _)| byte_index)
     {
       Some(byte_index) => {
-        line.get_byte_slice(byte_index..byte_index + expected.len())
+        line.get_byte_slice(byte_index..byte_index + expected.len()).as_ref()
           == Some(expected)
       }
       None => false,
@@ -372,7 +372,7 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
     // In this case, we can't split this mapping.
     // webpack-sources also have this function, refer https://github.com/webpack/webpack-sources/blob/main/lib/ReplaceSource.js#L158
     let check_original_content =
-      |source_index: u32, line: u32, column: u32, expected_chunk: Rope| {
+      |source_index: u32, line: u32, column: u32, expected_chunk: &Rope| {
         if let Some(Some(source_content)) =
           source_content_lines.borrow_mut().get_mut(&source_index)
         {
@@ -432,7 +432,7 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
               original.source_index,
               original.original_line,
               original.original_column,
-              chunk.byte_slice(0..chunk_pos as usize),
+              &chunk.byte_slice(0..chunk_pos as usize),
             )
           }) {
             original.original_column += chunk_pos;
@@ -458,8 +458,24 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
             let offset = next_replacement_pos - pos;
             let chunk_slice = chunk
               .byte_slice(chunk_pos as usize..(chunk_pos + offset) as usize);
+
+            let new_original_column = if let Some(original) =
+              mapping.original.as_mut().filter(|original| {
+                check_original_content(
+                  original.source_index,
+                  original.original_line,
+                  original.original_column,
+                  &chunk_slice,
+                )
+              })
+            {
+              Some(original.original_column + chunk_slice.len() as u32)
+            } else {
+              None
+            };
+
             on_chunk(
-              Some(chunk_slice.clone()),
+              Some(chunk_slice),
               Mapping {
                 generated_line: line as u32,
                 generated_column: ((mapping.generated_column as i64)
@@ -483,17 +499,9 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
             mapping.generated_column += offset;
             chunk_pos += offset;
             pos = next_replacement_pos;
-            if let Some(original) =
-              mapping.original.as_mut().filter(|original| {
-                check_original_content(
-                  original.source_index,
-                  original.original_line,
-                  original.original_column,
-                  chunk_slice.clone(),
-                )
-              })
-            {
-              original.original_column += chunk_slice.len() as u32;
+
+            if let Some(new_original_column) = new_original_column {
+              mapping.original.as_mut().unwrap().original_column = new_original_column;
             }
           }
           // Insert replacement content split into chunks by lines
@@ -611,7 +619,7 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
                   original.source_index,
                   original.original_line,
                   original.original_column,
-                  chunk.byte_slice(
+                  &chunk.byte_slice(
                     chunk_pos as usize..(chunk_pos + offset as u32) as usize,
                   ),
                 )
@@ -695,9 +703,12 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
     // Insert remaining replacements content split into chunks by lines
     let mut line = result.generated_line as i64 + generated_line_offset;
     let matches: Vec<Rope> = split_into_lines(&remainder).collect();
-    for (m, content_line) in matches.iter().enumerate() {
+    let matches_len = matches.len();
+    for (m, content_line) in matches.into_iter().enumerate() {
+      let ends_with_newline = content_line.ends_with("\n");
+      let content_line_len = content_line.len();
       on_chunk(
-        Some(content_line.clone()),
+        Some(content_line),
         Mapping {
           generated_line: line as u32,
           generated_column: ((result.generated_column as i64)
@@ -710,11 +721,11 @@ impl<T: Source> StreamChunks for ReplaceSource<T> {
         },
       );
 
-      if m == matches.len() - 1 && !content_line.ends_with("\n") {
+      if m == matches_len - 1 && !ends_with_newline {
         if generated_column_offset_line == line {
-          generated_column_offset += content_line.len() as i64;
+          generated_column_offset += content_line_len as i64;
         } else {
-          generated_column_offset = content_line.len() as i64;
+          generated_column_offset = content_line_len as i64;
           generated_column_offset_line = line;
         }
       } else {
